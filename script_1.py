@@ -5,14 +5,20 @@ from netmiko.exceptions import NetmikoTimeoutException, NetmikoAuthenticationExc
 # 1. Definición de los dispositivos en un diccionario
 dispositivos = [
     {
-        "device_type": "cisco_ios",  # Define el sistema operativo (IOS, XE, XR, etc.)
-        "host": "1192.168.1.254",    # IP del Router
+        "device_type": "cisco_ios",  
+        "host": "170.5.0.1",    # IP del Router
         "username": "admin",
-        "secret": "SecretClass123",  # Contraseña para el modo enable (privileged EXEC)
+        "secret": "SecretClass123",  # Contraseña para el modo enable 
     },
     {
         "device_type": "cisco_ios",
-        "host": "192.168.1.253",    # IP del Switch
+        "host": "170.5.0.254",    # IP del Switch
+        "username": "admin",
+        "secret": "SecretClass123",
+    },
+    {       #agregando un firewall cambio 1
+        "device_type": "cisco_ios",
+        "host": "170.5.0.2",    # IP del Firewall
         "username": "admin",
         "secret": "SecretClass123",
     }
